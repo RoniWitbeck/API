@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "MySQL Local",
+            "database": "MockData",
+            "username": "root",
+            "password": "password",
+            "connectionTimeout": 30,
+            "group": "Roni"
+        }
+    ]
+}
