@@ -1,13 +1,13 @@
-import query from "../db/utils";
+import query from "../db/utils.js";
 
 const findAll = async () => {
     return await query(
-        "SELECT id, first_name, last_name, email, gender FROM Columns"
+        "SELECT id, first_name, last_name, email, gender FROM mock_data"
     );
 };
 
 const findOne = async (first_name, last_name) => {
-    return await query("SELECT id, first_name, last_name, email, gender FROM Columns WHERE first_name OR last_name = ?", [
+    return await query("SELECT id, first_name, last_name, email, gender FROM mock_data WHERE first_name OR last_name = ?", [
         first_name,  
         last_name 
     ]);
