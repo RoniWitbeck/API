@@ -13,8 +13,8 @@ router.get("/:id?", async (req, res, next) => {
         } else {
             data = await people.findAll();
         }
-
         res.json(data);
+
     } catch (err) {
         next(err);
     }
@@ -34,7 +34,7 @@ router.put("/:id", async (req, res, next) => {
     try {
         let { id } = req.params;
         let updatedUser = req.body;
-        let data = await people.updateOne(id, updatedUser);
+        let data = await people.updateOne(updatedUser, id);
         res.json(data);
     } catch (err) {
         next(err);
